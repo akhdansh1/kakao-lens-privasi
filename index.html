@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kebijakan Privasi Kakao Lens</title>
+<meta name="description" content="Kebijakan privasi aplikasi Android Kakao Lens: data apa yang disimpan, apa yang dikirim keluar, dan cara menghapusnya.">
+<style>
+  :root {
+    --bg: #f7f6f0; --kartu: #ffffff; --teks: #1f2a22; --redup: #5b665e;
+    --hijau: #1e4d2b; --aksen: #2e7d32; --garis: #dfe3da; --tanda: #e8f1e5;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #121713; --kartu: #1a211c; --teks: #e6ebe4; --redup: #a3ada5;
+      --hijau: #8fcf98; --aksen: #8fcf98; --garis: #2c352e; --tanda: #1f2b22;
+      color-scheme: dark;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--teks);
+    font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif;
+    padding: 32px max(16px, env(safe-area-inset-left)) 48px max(16px, env(safe-area-inset-right));
+  }
+  main { max-width: 720px; margin: 0 auto; }
+  header { border-bottom: 1px solid var(--garis); padding-bottom: 20px; margin-bottom: 28px; }
+  .label { font-size: 13px; letter-spacing: .06em; text-transform: uppercase; color: var(--aksen); font-weight: 600; }
+  h1 { font-size: 30px; line-height: 1.2; margin: 6px 0 8px; color: var(--hijau); text-wrap: balance; }
+  h2 { font-size: 19px; margin: 36px 0 10px; color: var(--hijau); }
+  p, li { max-width: 68ch; }
+  .meta { color: var(--redup); font-size: 14px; margin: 0; }
+  .ringkas { background: var(--tanda); border-radius: 12px; padding: 16px 20px; margin: 0 0 8px; }
+  .ringkas ul { margin: 8px 0 0; padding-left: 20px; }
+  table { width: 100%; border-collapse: collapse; font-size: 15px; background: var(--kartu); border-radius: 10px; overflow: hidden; }
+  .tabel { overflow-x: auto; }
+  th, td { text-align: left; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid var(--garis); }
+  th { font-size: 13px; color: var(--redup); font-weight: 600; }
+  tr:last-child td { border-bottom: 0; }
+  code { font-size: 14px; }
+  footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--garis); color: var(--redup); font-size: 14px; }
+  a { color: var(--aksen); }
+</style>
+</head>
+<body>
+<main>
+<header>
+  <div class="label">Kebijakan Privasi</div>
+  <h1>Kakao Lens</h1>
+  <p class="meta">Berlaku sejak 22 November 2026 · Versi aplikasi 0.2.0</p>
+</header>
+
+<section class="ringkas">
+  <strong>Ringkasan</strong>
+  <ul>
+    <li>Analisis foto buah kakao dilakukan sepenuhnya di perangkat. Foto tidak pernah dikirim ke server mana pun.</li>
+    <li>Data akun (nama, nomor HP, data kebun) dan PIN hanya disimpan di perangkat Anda. Kami tidak memiliki server dan tidak dapat melihat data tersebut.</li>
+    <li>Satu-satunya data yang keluar dari perangkat adalah perkiraan lokasi kebun (dibulatkan sekitar 1 km) untuk mengambil prakiraan cuaca, dan fitur ini dapat dimatikan.</li>
+    <li>Aplikasi tidak memuat iklan, analitik, atau pelacak pihak ketiga.</li>
+  </ul>
+</section>
+
+<h2>1. Tentang aplikasi ini</h2>
+<p>Kakao Lens adalah aplikasi Android untuk membantu petani memeriksa kesehatan buah kakao dari foto. Aplikasi dikembangkan oleh Akhdan Shalahudin, mahasiswa Institut Teknologi Sains Bandung, sebagai bagian dari proyek akademik. Hasil analisis merupakan alat bantu, bukan diagnosis pasti; keputusan pengendalian sebaiknya dikonfirmasi bersama petugas lapangan.</p>
+
+<h2>2. Data yang disimpan di perangkat Anda</h2>
+<p>Data berikut dibuat oleh Anda saat memakai aplikasi dan disimpan di penyimpanan internal aplikasi pada perangkat Anda. Data ini tidak dikirim kepada kami maupun pihak lain.</p>
+<div class="tabel">
+<table>
+  <tr><th>Data</th><th>Kegunaan</th></tr>
+  <tr><td>Nama lengkap dan nomor HP</td><td>Menyapa pengguna dan masuk kembali ke aplikasi setelah keluar. Nomor HP tidak diverifikasi dan tidak dipakai untuk menghubungi Anda.</td></tr>
+  <tr><td>Data kebun: nama kebun, desa, luas, jumlah pohon, tahun tanam</td><td>Ditampilkan di Beranda dan Akun sebagai konteks pemeriksaan.</td></tr>
+  <tr><td>Titik lokasi kebun (opsional)</td><td>Diambil satu kali saat Anda menekan tombol "Ambil titik", untuk menampilkan cuaca di kebun. Lokasi tidak dilacak terus-menerus dan tidak diambil di latar belakang.</td></tr>
+  <tr><td>PIN 6 angka</td><td>Membuka aplikasi. Yang disimpan hanya nilai hash (PBKDF2), bukan PIN itu sendiri.</td></tr>
+  <tr><td>Foto buah dan hasil analisis</td><td>Ditampilkan kembali di Riwayat. Foto dari galeri disalin ke penyimpanan aplikasi; foto asli di galeri tidak diubah.</td></tr>
+  <tr><td>Catatan perawatan kebun (formulir GAP)</td><td>Pengingat praktik budidaya yang baik bagi Anda sendiri.</td></tr>
+  <tr><td>Data cuaca terakhir</td><td>Ditampilkan saat perangkat tidak memiliki sinyal.</td></tr>
+</table>
+</div>
+<p>Pencadangan otomatis Android dinonaktifkan untuk aplikasi ini, sehingga data di atas tidak ikut tersalin ke akun Google Anda.</p>
+
+<h2>3. Izin yang diminta</h2>
+<div class="tabel">
+<table>
+  <tr><th>Izin</th><th>Alasan</th></tr>
+  <tr><td>Kamera</td><td>Memotret buah kakao langsung di aplikasi. Tanpa izin ini, foto tetap dapat dipilih dari galeri.</td></tr>
+  <tr><td>Lokasi (perkiraan dan akurat)</td><td>Mengambil titik kebun satu kali, atas perintah Anda. Bersifat opsional.</td></tr>
+  <tr><td>Internet</td><td>Hanya untuk mengambil prakiraan cuaca (lihat bagian 4). Analisis foto tidak memerlukan internet.</td></tr>
+</table>
+</div>
+<p>Pemilihan foto dari galeri memakai pemilih foto bawaan Android, sehingga aplikasi hanya dapat membaca foto yang Anda pilih dan tidak memerlukan izin akses ke seluruh penyimpanan.</p>
+
+<h2>4. Data yang dikirim keluar dari perangkat</h2>
+<p>Jika fitur cuaca aktif dan titik kebun telah diisi, aplikasi mengirim koordinat kebun yang telah dibulatkan ke dua angka desimal (ketelitian sekitar 1 km) ke layanan prakiraan cuaca <a href="https://open-meteo.com/">Open-Meteo</a>. Permintaan ini tidak menyertakan nama, nomor HP, foto, maupun data lain. Seperti setiap koneksi internet, alamat IP perangkat Anda dapat terlihat oleh penyedia layanan tersebut; penanganannya mengikuti <a href="https://open-meteo.com/en/terms">ketentuan Open-Meteo</a>.</p>
+<p>Fitur cuaca dapat dimatikan kapan saja melalui <strong>Akun → Pengaturan → Cuaca di Beranda</strong>. Setelah dimatikan, aplikasi tidak membuka koneksi internet sama sekali.</p>
+
+<h2>5. Berbagi dan menyimpan foto hasil</h2>
+<p>Foto hasil analisis hanya keluar dari aplikasi bila Anda sendiri menekan <strong>Simpan</strong> (foto disimpan ke galeri perangkat) atau <strong>Bagikan</strong> (Anda memilih aplikasi tujuan, misalnya WhatsApp). Setelah dibagikan, foto tunduk pada kebijakan aplikasi tujuan yang Anda pilih.</p>
+
+<h2>6. Yang tidak kami lakukan</h2>
+<ul>
+  <li>Tidak mengumpulkan data pribadi ke server kami; aplikasi ini tidak memiliki server.</li>
+  <li>Tidak menjual atau membagikan data kepada pihak ketiga.</li>
+  <li>Tidak menampilkan iklan dan tidak memakai layanan analitik atau pelacakan.</li>
+  <li>Tidak melacak lokasi di latar belakang.</li>
+</ul>
+
+<h2>7. Keamanan</h2>
+<p>Data disimpan di area penyimpanan khusus aplikasi yang tidak dapat dibaca oleh aplikasi lain. PIN disimpan sebagai hash dan dilengkapi jeda setelah beberapa kali salah memasukkan. Perlindungan ini ditujukan terhadap orang yang meminjam perangkat; jaga juga kunci layar perangkat Anda.</p>
+
+<h2>8. Menghapus data</h2>
+<ul>
+  <li><strong>Akun → Hapus akun dari HP ini</strong> menghapus nama, nomor HP, data kebun, PIN, catatan perawatan, dan data cuaca.</li>
+  <li>Riwayat pemeriksaan dapat dihapus satu per satu dari layar hasil pemeriksaan.</li>
+  <li>Menghapus instalasi aplikasi menghapus seluruh data aplikasi dari perangkat. Foto yang sebelumnya Anda simpan ke galeri tetap ada sampai Anda menghapusnya sendiri.</li>
+</ul>
+<p>Karena kami tidak menyimpan salinan data Anda, tidak ada data yang perlu diminta untuk dihapus dari pihak kami.</p>
+
+<h2>9. Anak-anak</h2>
+<p>Aplikasi ini ditujukan bagi petani dan petugas pertanian dewasa, dan tidak ditujukan untuk anak-anak.</p>
+
+<h2>10. Perubahan kebijakan</h2>
+<p>Kebijakan ini dapat diperbarui bila fitur aplikasi berubah. Versi terbaru selalu tersedia di halaman ini, dengan tanggal berlaku di bagian atas.</p>
+
+<h2>11. Kontak</h2>
+<p>Pertanyaan mengenai kebijakan privasi ini dapat dikirim kepada Akhdan Shalahudin melalui email <span id="email">EMAIL_KONTAK</span>.</p>
+
+<footer>Kakao Lens · Institut Teknologi Sains Bandung</footer>
+</main>
+</body>
+</html>
