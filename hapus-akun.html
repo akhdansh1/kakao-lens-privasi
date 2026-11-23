@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hapus Akun Kakao Lens</title>
+<meta name="description" content="Cara menghapus akun Kakao Lens beserta seluruh datanya di server, dari aplikasi maupun melalui email.">
+<style>
+  :root {
+    --bg: #f7f6f0; --kartu: #ffffff; --teks: #1f2a22; --redup: #5b665e;
+    --hijau: #1e4d2b; --aksen: #2e7d32; --garis: #dfe3da; --tanda: #e8f1e5;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #121713; --kartu: #1a211c; --teks: #e6ebe4; --redup: #a3ada5;
+      --hijau: #8fcf98; --aksen: #8fcf98; --garis: #2c352e; --tanda: #1f2b22;
+      color-scheme: dark;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--teks);
+    font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif;
+    padding: 32px max(16px, env(safe-area-inset-left)) 48px max(16px, env(safe-area-inset-right));
+  }
+  main { max-width: 720px; margin: 0 auto; }
+  header { border-bottom: 1px solid var(--garis); padding-bottom: 20px; margin-bottom: 28px; }
+  .label { font-size: 13px; letter-spacing: .06em; text-transform: uppercase; color: var(--aksen); font-weight: 600; }
+  h1 { font-size: 30px; line-height: 1.2; margin: 6px 0 8px; color: var(--hijau); text-wrap: balance; }
+  h2 { font-size: 19px; margin: 36px 0 10px; color: var(--hijau); }
+  p, li { max-width: 68ch; }
+  .meta { color: var(--redup); font-size: 14px; margin: 0; }
+  .ringkas { background: var(--tanda); border-radius: 12px; padding: 16px 20px; margin: 0 0 8px; }
+  .ringkas ul { margin: 8px 0 0; padding-left: 20px; }
+  table { width: 100%; border-collapse: collapse; font-size: 15px; background: var(--kartu); border-radius: 10px; overflow: hidden; }
+  .tabel { overflow-x: auto; }
+  th, td { text-align: left; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid var(--garis); }
+  th { font-size: 13px; color: var(--redup); font-weight: 600; }
+  tr:last-child td { border-bottom: 0; }
+  code { font-size: 14px; }
+  footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--garis); color: var(--redup); font-size: 14px; }
+  a { color: var(--aksen); }
+  ol li { margin-bottom: 6px; }
+</style>
+</head>
+<body>
+<main>
+<header>
+  <div class="label">Permintaan Penghapusan Akun</div>
+  <h1>Hapus akun Kakao Lens</h1>
+  <p class="meta">Pengembang: Akhdan Shalahudin · Institut Teknologi Sains Bandung</p>
+</header>
+
+<p>Halaman ini menjelaskan cara menghapus akun aplikasi Android <strong>Kakao Lens</strong> beserta seluruh data yang tersimpan di server.</p>
+
+<h2>Cara 1: dari dalam aplikasi (seketika)</h2>
+<ol>
+  <li>Buka aplikasi Kakao Lens dan pastikan perangkat terhubung ke internet.</li>
+  <li>Buka tab <strong>Akun</strong>.</li>
+  <li>Ketuk <strong>Hapus akun</strong>, lalu konfirmasi.</li>
+</ol>
+<p>Akun dan seluruh datanya langsung dihapus dari server, kemudian data dihapus dari perangkat tersebut.</p>
+
+<h2>Cara 2: melalui email (bila aplikasi sudah tidak terpasang)</h2>
+<ol>
+  <li>Kirim email ke <a href="mailto:akhdanshalahudin@gmail.com?subject=Hapus%20akun%20Kakao%20Lens">akhdanshalahudin@gmail.com</a> dengan subjek <strong>Hapus akun Kakao Lens</strong>.</li>
+  <li>Kirim email tersebut <strong>dari alamat akun Google yang Anda pakai untuk masuk</strong> ke Kakao Lens, agar kami dapat memastikan bahwa permintaan berasal dari pemilik akun.</li>
+  <li>Kami menghapus akun dan seluruh datanya paling lambat 30 hari setelah email diterima, lalu mengirim balasan konfirmasi.</li>
+</ol>
+
+<h2>Data yang dihapus</h2>
+<ul>
+  <li>Data akun: alamat email Google, pengenal akun Google, dan nama.</li>
+  <li>Data kebun, termasuk titik lokasi kebun.</li>
+  <li>Riwayat pemeriksaan beserta foto dan hasil analisisnya.</li>
+  <li>Kunjungan kebun dan catatan perawatan (formulir GAP).</li>
+</ul>
+<p>Seluruh data di atas dihapus permanen dan tidak dapat dikembalikan. Tidak ada data akun yang disimpan setelah penghapusan. Log teknis server (alamat IP, waktu, dan alamat permintaan) tidak berisi data akun dan ditimpa secara berkala.</p>
+<p>Foto yang sebelumnya Anda simpan ke galeri perangkat atau bagikan ke aplikasi lain berada di luar kendali kami dan tidak ikut terhapus.</p>
+
+<p>Informasi lengkap tersedia di <a href="./">Kebijakan Privasi Kakao Lens</a>.</p>
+
+<footer>Kakao Lens · Institut Teknologi Sains Bandung</footer>
+</main>
+</body>
+</html>

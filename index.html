@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Kebijakan Privasi Kakao Lens</title>
-<meta name="description" content="Kebijakan privasi aplikasi Android Kakao Lens: data apa yang disimpan, apa yang dikirim keluar, dan cara menghapusnya.">
+<meta name="description" content="Kebijakan privasi aplikasi Android Kakao Lens: data yang disimpan di perangkat dan di server, pihak yang terlibat, dan cara menghapus akun.">
 <style>
   :root {
     --bg: #f7f6f0; --kartu: #ffffff; --teks: #1f2a22; --redup: #5b665e;
@@ -47,83 +47,98 @@
 <header>
   <div class="label">Kebijakan Privasi</div>
   <h1>Kakao Lens</h1>
-  <p class="meta">Berlaku sejak 22 November 2026 · Versi aplikasi 0.3.0</p>
+  <p class="meta">Berlaku sejak 23 November 2026 · Versi aplikasi 0.6.0</p>
 </header>
 
 <section class="ringkas">
   <strong>Ringkasan</strong>
   <ul>
-    <li>Analisis foto buah kakao dilakukan sepenuhnya di perangkat. Foto tidak pernah dikirim ke server mana pun.</li>
-    <li>Data akun (nama, nomor HP, data kebun) dan PIN hanya disimpan di perangkat Anda. Kami tidak memiliki server dan tidak dapat melihat data tersebut.</li>
-    <li>Satu-satunya data yang keluar dari perangkat adalah perkiraan lokasi kebun (dibulatkan sekitar 1 km) untuk mengambil prakiraan cuaca, dan fitur ini dapat dimatikan.</li>
-    <li>Aplikasi tidak memuat iklan, analitik, atau pelacak pihak ketiga.</li>
+    <li>Pengguna masuk dengan akun Google. Aplikasi tidak lagi memakai PIN maupun nomor HP.</li>
+    <li>Analisis foto buah kakao dilakukan sepenuhnya di perangkat dan tetap berjalan tanpa internet.</li>
+    <li>Data akun, data kebun, riwayat pemeriksaan beserta fotonya, dan catatan perawatan disimpan di perangkat dan disalin ke server Kakao Lens, agar data tidak hilang dan dapat dibuka kembali di perangkat lain dengan akun Google yang sama.</li>
+    <li>Data tidak dijual, tidak dibagikan untuk iklan, dan aplikasi tidak memuat iklan, analitik, atau pelacak pihak ketiga.</li>
+    <li>Akun dan seluruh datanya di server dapat dihapus kapan saja melalui <strong>Akun → Hapus akun</strong>, atau melalui <a href="hapus-akun.html">permintaan penghapusan akun</a>.</li>
   </ul>
 </section>
 
 <h2>1. Tentang aplikasi ini</h2>
 <p>Kakao Lens adalah aplikasi Android untuk membantu petani memeriksa kesehatan buah kakao dari foto. Aplikasi dikembangkan oleh Akhdan Shalahudin, mahasiswa Institut Teknologi Sains Bandung, sebagai bagian dari proyek akademik. Hasil analisis merupakan alat bantu, bukan diagnosis pasti; keputusan pengendalian sebaiknya dikonfirmasi bersama petugas lapangan.</p>
 
-<h2>2. Data yang disimpan di perangkat Anda</h2>
-<p>Data berikut dibuat oleh Anda saat memakai aplikasi dan disimpan di penyimpanan internal aplikasi pada perangkat Anda. Data ini tidak dikirim kepada kami maupun pihak lain.</p>
+<h2>2. Masuk dengan akun Google</h2>
+<p>Untuk memakai aplikasi, Anda masuk dengan akun Google melalui fitur masuk bawaan Android. Dengan persetujuan Anda pada layar Google, aplikasi menerima nama, alamat email, dan foto profil akun Google Anda.</p>
+<ul>
+  <li><strong>Alamat email</strong> dan pengenal akun Google disimpan di server sebagai identitas akun Anda.</li>
+  <li><strong>Nama</strong> dipakai untuk mengisi awal kolom nama saat mendaftar; Anda dapat mengubahnya.</li>
+  <li><strong>Foto profil</strong> tidak dipakai dan tidak disimpan.</li>
+</ul>
+<p>Kata sandi Google Anda tidak pernah diterima oleh aplikasi maupun server kami. Server memeriksa keabsahan tanda masuk dari Google, lalu memberikan sesi yang berlaku 30 hari. Setelah sesi berakhir, aplikasi tetap dapat dipakai; penyalinan ke server berhenti sampai Anda masuk kembali.</p>
+
+<h2>3. Data yang disimpan</h2>
+<p>Data berikut dibuat oleh Anda saat memakai aplikasi. Semuanya disimpan lebih dahulu di perangkat, lalu disalin ke server Kakao Lens di latar belakang ketika perangkat terhubung ke internet.</p>
 <div class="tabel">
 <table>
-  <tr><th>Data</th><th>Kegunaan</th></tr>
-  <tr><td>Nama lengkap dan nomor HP</td><td>Menyapa pengguna dan masuk kembali ke aplikasi setelah keluar. Nomor HP tidak diverifikasi dan tidak dipakai untuk menghubungi Anda.</td></tr>
-  <tr><td>Data kebun: nama kebun, desa, luas, jumlah pohon, tahun tanam</td><td>Ditampilkan di Beranda dan Akun sebagai konteks pemeriksaan.</td></tr>
-  <tr><td>Titik lokasi kebun (opsional)</td><td>Diambil satu kali saat Anda menekan tombol "Ambil titik", untuk menampilkan cuaca di kebun. Lokasi tidak dilacak terus-menerus dan tidak diambil di latar belakang.</td></tr>
-  <tr><td>PIN 6 angka</td><td>Membuka aplikasi. Yang disimpan hanya nilai hash (PBKDF2), bukan PIN itu sendiri.</td></tr>
-  <tr><td>Kode pemulihan</td><td>Membuat PIN baru bila Anda lupa PIN, tanpa kehilangan data. Kode ditampilkan sekali untuk Anda catat; yang disimpan di perangkat hanya nilai hash (PBKDF2), bukan kode itu sendiri.</td></tr>
-  <tr><td>Foto buah dan hasil analisis</td><td>Ditampilkan kembali di Riwayat. Foto dari galeri disalin ke penyimpanan aplikasi; foto asli di galeri tidak diubah.</td></tr>
-  <tr><td>Catatan perawatan kebun (formulir GAP)</td><td>Pengingat praktik budidaya yang baik bagi Anda sendiri.</td></tr>
-  <tr><td>Data cuaca terakhir</td><td>Ditampilkan saat perangkat tidak memiliki sinyal.</td></tr>
+  <tr><th>Data</th><th>Kegunaan</th><th>Disalin ke server</th></tr>
+  <tr><td>Nama lengkap dan alamat email Google</td><td>Menyapa pengguna dan mengenali akun.</td><td>Ya</td></tr>
+  <tr><td>Data kebun: nama kebun, desa, luas, jumlah pohon, tahun tanam</td><td>Ditampilkan di Beranda dan Akun sebagai konteks pemeriksaan.</td><td>Ya</td></tr>
+  <tr><td>Titik lokasi kebun (opsional)</td><td>Diambil satu kali saat Anda menekan tombol "Ambil titik", untuk menampilkan cuaca di kebun. Lokasi tidak dilacak terus-menerus dan tidak diambil di latar belakang.</td><td>Ya, sebagai bagian dari data kebun</td></tr>
+  <tr><td>Foto buah dan hasil analisis (jenis temuan, tingkat keyakinan, waktu pemeriksaan, mutu foto, versi model)</td><td>Ditampilkan kembali di Riwayat. Foto dari galeri disalin ke penyimpanan aplikasi; foto asli di galeri tidak diubah.</td><td>Ya</td></tr>
+  <tr><td>Kunjungan kebun (waktu mulai dan selesai pemotretan beruntun)</td><td>Mengelompokkan foto dalam satu kunjungan.</td><td>Ya</td></tr>
+  <tr><td>Catatan perawatan kebun (formulir GAP)</td><td>Pengingat praktik budidaya yang baik bagi Anda sendiri.</td><td>Ya</td></tr>
+  <tr><td>Pengaturan cuaca dan data cuaca terakhir</td><td>Ditampilkan saat perangkat tidak memiliki sinyal.</td><td>Tidak</td></tr>
 </table>
 </div>
-<p>Pencadangan otomatis Android dinonaktifkan untuk aplikasi ini, sehingga data di atas tidak ikut tersalin ke akun Google Anda.</p>
+<p>Pencadangan otomatis Android dinonaktifkan untuk aplikasi ini; salinan data hanya disimpan di server Kakao Lens sebagaimana dijelaskan di atas.</p>
 
-<h2>3. Izin yang diminta</h2>
+<h2>4. Server dan pihak yang terlibat</h2>
+<ul>
+  <li><strong>Server Kakao Lens</strong> dikelola oleh pengembang dan berada di Indonesia, dengan alamat <code>api.kakaolens.my.id</code>. Server hanya menyimpan data akun Anda sendiri; satu akun tidak dapat membaca data akun lain.</li>
+  <li><strong>Cloudflare</strong> meneruskan koneksi antara aplikasi dan server. Seluruh koneksi dienkripsi (HTTPS) selama pengiriman.</li>
+  <li><strong>Google</strong> menyediakan fitur masuk dengan akun Google dan memeriksa keabsahan tanda masuk.</li>
+  <li><strong><a href="https://open-meteo.com/">Open-Meteo</a></strong> menerima koordinat kebun yang telah dibulatkan ke dua angka desimal (ketelitian sekitar 1 km) bila fitur cuaca aktif dan titik kebun telah diisi. Permintaan ini tidak menyertakan nama, email, foto, maupun data lain; penanganannya mengikuti <a href="https://open-meteo.com/en/terms">ketentuan Open-Meteo</a>. Fitur cuaca dapat dimatikan melalui <strong>Akun → Pengaturan → Cuaca di Beranda</strong>.</li>
+</ul>
+<p>Seperti layanan internet pada umumnya, server mencatat log teknis berupa alamat IP, waktu, dan alamat permintaan untuk keperluan keamanan dan penanganan gangguan. Log ini tidak berisi foto maupun isi data Anda dan ditimpa secara berkala.</p>
+
+<h2>5. Izin yang diminta</h2>
 <div class="tabel">
 <table>
   <tr><th>Izin</th><th>Alasan</th></tr>
   <tr><td>Kamera</td><td>Memotret buah kakao langsung di aplikasi. Tanpa izin ini, foto tetap dapat dipilih dari galeri.</td></tr>
   <tr><td>Lokasi (perkiraan dan akurat)</td><td>Mengambil titik kebun satu kali, atas perintah Anda. Bersifat opsional.</td></tr>
-  <tr><td>Internet</td><td>Hanya untuk mengambil prakiraan cuaca (lihat bagian 4). Analisis foto tidak memerlukan internet.</td></tr>
+  <tr><td>Internet</td><td>Masuk dengan akun Google, menyalin data ke server, dan mengambil prakiraan cuaca. Analisis foto tidak memerlukan internet.</td></tr>
 </table>
 </div>
 <p>Pemilihan foto dari galeri memakai pemilih foto bawaan Android, sehingga aplikasi hanya dapat membaca foto yang Anda pilih dan tidak memerlukan izin akses ke seluruh penyimpanan.</p>
 
-<h2>4. Data yang dikirim keluar dari perangkat</h2>
-<p>Jika fitur cuaca aktif dan titik kebun telah diisi, aplikasi mengirim koordinat kebun yang telah dibulatkan ke dua angka desimal (ketelitian sekitar 1 km) ke layanan prakiraan cuaca <a href="https://open-meteo.com/">Open-Meteo</a>. Permintaan ini tidak menyertakan nama, nomor HP, foto, maupun data lain. Seperti setiap koneksi internet, alamat IP perangkat Anda dapat terlihat oleh penyedia layanan tersebut; penanganannya mengikuti <a href="https://open-meteo.com/en/terms">ketentuan Open-Meteo</a>.</p>
-<p>Fitur cuaca dapat dimatikan kapan saja melalui <strong>Akun → Pengaturan → Cuaca di Beranda</strong>. Setelah dimatikan, aplikasi tidak membuka koneksi internet sama sekali.</p>
+<h2>6. Berbagi dan menyimpan foto hasil</h2>
+<p>Selain disalin ke server akun Anda, foto hasil analisis hanya keluar dari aplikasi bila Anda sendiri menekan <strong>Simpan</strong> (foto disimpan ke galeri perangkat) atau <strong>Bagikan</strong> (Anda memilih aplikasi tujuan, misalnya WhatsApp). Setelah dibagikan, foto tunduk pada kebijakan aplikasi tujuan yang Anda pilih.</p>
 
-<h2>5. Berbagi dan menyimpan foto hasil</h2>
-<p>Foto hasil analisis hanya keluar dari aplikasi bila Anda sendiri menekan <strong>Simpan</strong> (foto disimpan ke galeri perangkat) atau <strong>Bagikan</strong> (Anda memilih aplikasi tujuan, misalnya WhatsApp). Setelah dibagikan, foto tunduk pada kebijakan aplikasi tujuan yang Anda pilih.</p>
-
-<h2>6. Yang tidak kami lakukan</h2>
+<h2>7. Yang tidak kami lakukan</h2>
 <ul>
-  <li>Tidak mengumpulkan data pribadi ke server kami; aplikasi ini tidak memiliki server.</li>
-  <li>Tidak menjual atau membagikan data kepada pihak ketiga.</li>
+  <li>Tidak menjual data atau membagikannya kepada pihak ketiga untuk iklan maupun tujuan lain.</li>
   <li>Tidak menampilkan iklan dan tidak memakai layanan analitik atau pelacakan.</li>
   <li>Tidak melacak lokasi di latar belakang.</li>
+  <li>Tidak memakai foto atau data Anda untuk melatih model tanpa persetujuan terpisah dari Anda.</li>
 </ul>
 
-<h2>7. Keamanan</h2>
-<p>Data disimpan di area penyimpanan khusus aplikasi yang tidak dapat dibaca oleh aplikasi lain. PIN dan kode pemulihan disimpan sebagai hash dan dilengkapi jeda setelah beberapa kali salah memasukkan. Perlindungan ini ditujukan terhadap orang yang meminjam perangkat; jaga juga kunci layar perangkat Anda.</p>
+<h2>8. Keamanan</h2>
+<p>Di perangkat, data disimpan di area penyimpanan khusus aplikasi yang tidak dapat dibaca oleh aplikasi lain. Koneksi ke server dienkripsi (HTTPS), dan server hanya dapat diakses melalui sesi akun yang sah. Karena aplikasi langsung terbuka setelah masuk, jaga kunci layar perangkat Anda.</p>
 
-<h2>8. Menghapus data</h2>
+<h2>9. Keluar dan menghapus data</h2>
 <ul>
-  <li><strong>Akun → Hapus akun dari HP ini</strong> menghapus nama, nomor HP, data kebun, PIN, kode pemulihan, catatan perawatan, dan data cuaca.</li>
-  <li>Riwayat pemeriksaan dapat dihapus satu per satu dari layar hasil pemeriksaan.</li>
-  <li>Menghapus instalasi aplikasi menghapus seluruh data aplikasi dari perangkat. Foto yang sebelumnya Anda simpan ke galeri tetap ada sampai Anda menghapusnya sendiri.</li>
+  <li><strong>Akun → Keluar</strong> menghapus seluruh data akun dari perangkat ini. Salinan di server tetap ada, sehingga data kembali saat Anda masuk lagi dengan akun Google yang sama. Bila masih ada data yang belum tersalin, aplikasi memberi peringatan terlebih dahulu.</li>
+  <li><strong>Akun → Hapus akun</strong> menghapus akun beserta seluruh data di server (data akun, data kebun, riwayat, foto, kunjungan, dan catatan), kemudian menghapus data dari perangkat ini. Penghapusan di server dilakukan seketika dan tidak dapat dibatalkan.</li>
+  <li>Riwayat pemeriksaan dapat dihapus satu per satu dari layar hasil pemeriksaan; penghapusan ikut tersalin ke server.</li>
+  <li>Bila aplikasi sudah tidak terpasang, penghapusan akun dapat diminta melalui halaman <a href="hapus-akun.html">Permintaan penghapusan akun</a>.</li>
 </ul>
-<p>Karena kami tidak menyimpan salinan data Anda, tidak ada data yang perlu diminta untuk dihapus dari pihak kami.</p>
+<p>Data disimpan di server selama akun masih ada. Foto yang sebelumnya Anda simpan ke galeri atau bagikan ke aplikasi lain tidak ikut terhapus.</p>
 
-<h2>9. Anak-anak</h2>
+<h2>10. Anak-anak</h2>
 <p>Aplikasi ini ditujukan bagi petani dan petugas pertanian dewasa, dan tidak ditujukan untuk anak-anak.</p>
 
-<h2>10. Perubahan kebijakan</h2>
-<p>Kebijakan ini dapat diperbarui bila fitur aplikasi berubah. Versi terbaru selalu tersedia di halaman ini, dengan tanggal berlaku di bagian atas.</p>
+<h2>11. Perubahan kebijakan</h2>
+<p>Kebijakan ini dapat diperbarui bila fitur aplikasi berubah. Versi terbaru selalu tersedia di halaman ini, dengan tanggal berlaku di bagian atas. Versi 0.6.0 menggantikan versi sebelumnya yang menyatakan bahwa aplikasi tidak memiliki server.</p>
 
-<h2>11. Kontak</h2>
+<h2>12. Kontak</h2>
 <p>Pertanyaan mengenai kebijakan privasi ini dapat dikirim kepada Akhdan Shalahudin melalui email <a href="mailto:akhdanshalahudin@gmail.com">akhdanshalahudin@gmail.com</a>.</p>
 
 <footer>Kakao Lens · Institut Teknologi Sains Bandung</footer>
